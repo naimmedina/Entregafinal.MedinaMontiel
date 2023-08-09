@@ -1,0 +1,10 @@
+  // Mapa de colores
+  $colors:(gris:#75767A,platino:#D9D8DB,rojo:#fa001159,gris-secundario: #262627,negro: #000101,verde: #89d631);
+body {
+    background-color: map-get($colors,gris-secundario);
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    grid-template-rows: 1fr auto;
+  }

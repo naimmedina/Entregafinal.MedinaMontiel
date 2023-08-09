@@ -1,0 +1,14 @@
+.card-button {
+    border: 1px solid #252525;
+    display: flex;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+    width: 50px;
+    &:hover {
+        border: 1px solid map-get($colors,verde);
+        background-color: map-get($colors,verde);
+       }
+  } 

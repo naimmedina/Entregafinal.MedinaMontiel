@@ -1,0 +1,110 @@
+header {
+    background-color: map-get($colors,rojo);
+    height: 100px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    color: map-get($colors,negro);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .header__enlaces {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+      & ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+      }
+      & ul li {
+        margin: 0 10px;
+      }
+      & ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 17px;
+      }
+  }
+  .header__enlaces__button {
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 2px;
+      width: 0;
+      background-color: white;
+      transition: 0.5s ease;
+  }
+  &:hover::before {
+      width: 100%;
+    }
+  &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 0;
+      width: 100%;
+      background-color: white;
+      transition: 0.4s ease;
+      z-index: -1;
+    }
+  &:hover::after {
+      height: 100%;
+      transition-delay: 0.4s;
+    }
+  }
+  .navbar-brand {
+    color: map-get($colors,primary-text);
+  }
+  .offcanvas-heade {
+    color: map-get($colors,primary-text);
+  }
+  .offcanvas-title {
+    color: black;
+  }
+  .offcanvas-body {
+    background-color: map-get($colors,primary);
+  }
+  .nav-link {
+    color: map-get($colors,primary-text);
+  }
+
+  @media (max-width: 1075px) {
+    header {
+      height: 100% auto;
+    }
+    .header__enlaces {
+       display: none;
+    }   
+    #header__titulo {
+      display: none;
+    }
+    .header__enlaces__button {
+      display: none;
+    }
+    .hamburguesa {
+      background-color: map-get($colors,primary);
+    }
+  }
+  @media (min-width: 1075px) {
+    .hamburguesa {
+      display: none;
+    }
+  }

@@ -1,0 +1,50 @@
+.contacto_titulo {
+    h1{
+    color: white;
+    text-align: center;
+        margin: 10px;
+    }
+}
+.contacto {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    & h3 {
+        text-align: center;
+        margin: 10px
+    }
+    & .contacto_metodos {
+        max-width: 500px;
+        & p {
+            margin: 10px;
+        }
+        & .contacto_iconos {
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+            i {
+                margin-top: 12px;
+            }
+        }
+    }
+    & .contacto_formulario_label {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        input {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+}
