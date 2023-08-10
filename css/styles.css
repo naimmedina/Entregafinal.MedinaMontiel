@@ -73,7 +73,6 @@ header {
   bottom: 0;
   height: 0;
   width: 100%;
-  background-color: white;
   transition: 0.4s ease;
   z-index: -1;
 }
@@ -145,6 +144,13 @@ header {
   display: flex;
   justify-content: space-around;
   margin: 15px;
+}
+
+#index__titulo {
+  display: flex;
+  color: white;
+  justify-content: center;
+  margin: 20px;
 }
 
 .formulario__usuario {
@@ -283,7 +289,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-bottom: 100px;
+  margin-bottom: 250px;
   margin-top: 20px;
 }
 .contacto h3 {
