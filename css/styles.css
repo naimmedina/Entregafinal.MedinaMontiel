@@ -89,20 +89,6 @@ header {
   header {
     height: 100% auto;
   }
-  .header__enlaces {
-    display: none;
-  }
-  #header__titulo {
-    display: none;
-  }
-  .header__enlaces__button {
-    display: none;
-  }
-}
-@media (min-width: 1075px) {
-  .hamburguesa {
-    display: none;
-  }
 }
 .foot {
   background-color: #000000;
@@ -132,8 +118,63 @@ header {
   background-color: #89d631;
 }
 
+.button__socio {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+}
+.button__socio:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: rgba(250, 0, 17, 0.3490196078);
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+.button__socio span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #E7E5DF;
+}
+.button__socio svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #E7E5DF;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.button__socio:hover:before {
+  width: 100%;
+  background: rgba(250, 0, 17, 0.3490196078);
+}
+.button__socio:hover svg {
+  transform: translateX(0);
+}
+.button__socio:active {
+  transform: scale(0.95);
+}
+
 .card {
   align-items: center;
+}
+
+.card-body p {
+  margin: 0px;
 }
 
 .index__carrusel {
@@ -153,11 +194,43 @@ header {
   margin: 20px;
 }
 
-.formulario__usuario {
+#index__buttons__socios {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  margin: 50px;
+  justify-content: space-evenly;
+}
+
+.contacto_titulo h1 {
+  color: white;
+  text-align: center;
+  margin: 10px;
+}
+
+.contacto {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 300px;
+  margin-top: 20px;
+}
+.contacto h3 {
+  text-align: center;
+  margin: 10px;
+}
+.contacto .contacto_metodos {
+  max-width: 500px;
+}
+.contacto .contacto_metodos p {
+  margin: 10px;
+}
+.contacto .contacto_metodos .contacto_iconos {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+.contacto .contacto_metodos .contacto_iconos i {
+  margin-top: 12px;
 }
 
 .form {
@@ -169,6 +242,9 @@ header {
   padding: 20px;
   border-radius: 20px;
   position: relative;
+}
+.form input::placeholder {
+  opacity: 0;
 }
 
 .title {
@@ -193,7 +269,7 @@ header {
 .title::before {
   width: 18px;
   height: 18px;
-  background-color: #000101;
+  background-color: rgba(250, 0, 17, 0.3490196078);
 }
 .title::after {
   width: 18px;
@@ -208,12 +284,6 @@ header {
 
 .signin {
   text-align: center;
-}
-.signin a {
-  color: royalblue;
-}
-.signin a:hover {
-  text-decoration: underline royalblue;
 }
 
 .flex {
@@ -278,48 +348,6 @@ header {
     opacity: 0;
   }
 }
-.contacto_titulo h1 {
-  color: white;
-  text-align: center;
-  margin: 10px;
-}
-
-.contacto {
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-bottom: 250px;
-  margin-top: 20px;
-}
-.contacto h3 {
-  text-align: center;
-  margin: 10px;
-}
-.contacto .contacto_metodos {
-  max-width: 500px;
-}
-.contacto .contacto_metodos p {
-  margin: 10px;
-}
-.contacto .contacto_metodos .contacto_iconos {
-  display: flex;
-  flex-direction: row;
-  margin: 10px;
-}
-.contacto .contacto_metodos .contacto_iconos i {
-  margin-top: 12px;
-}
-.contacto .contacto_formulario_label {
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-}
-.contacto .contacto_formulario_label input {
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
 @media (max-width: 1024px) {
   .contacto {
     flex-direction: column;

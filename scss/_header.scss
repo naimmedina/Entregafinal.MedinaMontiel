@@ -89,21 +89,4 @@ header {
     header {
       height: 100% auto;
     }
-    .header__enlaces {
-       display: none;
-    }   
-    #header__titulo {
-      display: none;
-    }
-    .header__enlaces__button {
-      display: none;
-    }
-    .hamburguesa {
-      background-color: map-get($colors,primary);
-    }
-  }
-  @media (min-width: 1075px) {
-    .hamburguesa {
-      display: none;
-    }
   }

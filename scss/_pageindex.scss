@@ -1,6 +1,11 @@
 .card {
     align-items: center;
    }
+.card-body{
+    & p {
+        margin: 0px;
+    }
+}
 .index__carrusel {
     margin: 30px;
 }
@@ -14,4 +19,9 @@
     color: white;
     justify-content: center;
     margin: 20px;
+}
+#index__buttons__socios {
+    display: flex;
+    margin: 50px;
+    justify-content: space-evenly;
 }
