@@ -200,6 +200,12 @@ header {
   justify-content: space-evenly;
 }
 
+#apidiv {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
 .contacto_titulo h1 {
   color: white;
   text-align: center;

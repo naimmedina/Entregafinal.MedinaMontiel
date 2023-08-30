@@ -260,3 +260,26 @@ let boton10 = document.getElementById('button__nuestrossocios');
 boton10.addEventListener('click', mostrarSocios);
 let boton11 = document.getElementById('button__nuevosocio');
 boton11.addEventListener('click', Agregarsocio);
+//fin socios.- inicio Api
+let urlapi = "https://api.bluelytics.com.ar/v2/latest"
+let contenedorapi = document.getElementById("apidiv")
+
+fetch(urlapi)
+.then(res => res.json())
+
+.then(data => {
+    console.log(data.blue)
+    const div = document.createElement("div")
+    div.innerHTML = `
+    <h4>Para tener en cuenta. El precio del dolar blue en estos momentos es de: $${data.blue.value_buy}<h4>
+    `
+    contenedorapi.appendChild(div)
+})
+
+
+
+.catch(error => {
+    console.error("Error con la API", error)
+})
+
+//Fin api.
